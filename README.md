@@ -15,6 +15,12 @@ cd ~/Desktop
 git clone https://github.com/EisaWando/L.Y.C.-Wordlist-Generator.git
 ```
 
+### 🏃 How to run?
+
+```
+python3 L.Y.C..py
+```
+
 ### 🧪 Tested On:
 
 * Kali Linux (recommended)
