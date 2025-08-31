@@ -8,14 +8,14 @@
 * Simple command-line interface
 * Lightweight and easy to use
 
-### 🚀 Installation:
+### 🚀 Installation (Kali Linux):
 
 ```
 cd ~/Desktop
 git clone https://github.com/EisaWando/L.Y.C.-Wordlist-Generator.git
 ```
 
-### 🏃 How to run?
+### 🏃 How to run (Kali Linux)? 
 
 ```
 python3 L.Y.C..py
@@ -24,5 +24,16 @@ python3 L.Y.C..py
 ### 🧪 Tested On:
 
 * Kali Linux (recommended)
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+### 🪟 L.Y.C. v2.0 (Windows Version): 
+
+```
+wordlistgen.bat
+```
+
 
 > ⚠️ **Disclaimer:** This tool is intended for educational and ethical use only. Always ensure you have permission before conducting any form of testing.
