@@ -23,7 +23,8 @@ python3 L.Y.C..py
 
 ### 🧪 Tested On:
 
-* Kali Linux (recommended)
+* Kali Linux
+* Ubuntu
 
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -33,6 +34,12 @@ python3 L.Y.C..py
 
 ```
 wordlistgen.bat
+```
+
+* Tested on these versions of Windows:
+```
+Windows 11
+Windows 10
 ```
 
 
