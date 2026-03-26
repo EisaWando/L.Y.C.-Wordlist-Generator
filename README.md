@@ -15,7 +15,7 @@ cd ~/Desktop
 git clone https://github.com/EisaWando/L.Y.C.-Wordlist-Generator.git
 ```
 
-### 🏃 How to run (Kali Linux)? 
+### 🏃 How to run? 
 
 ```
 python3 L.Y.C..py
@@ -25,7 +25,13 @@ python3 L.Y.C..py
 
 * Kali Linux
 * Ubuntu
+* Arch (KDE Plasma)
 
+### Requirements📜: 
+
+**Python**
+
+>Any version of Python, but only tested on 3.14.z
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
