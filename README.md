@@ -42,5 +42,10 @@ Windows 11
 Windows 10
 ```
 
+### Installation :
+
+You can simply hit the [Download](https://github.com/EisaWando/L.Y.C.-Wordlist-Generator/blob/main/wordlistgen.bat) button.
+
+
 
 > ⚠️ **Disclaimer:** This tool is intended for educational and ethical use only. Always ensure you have permission before conducting any form of testing.
