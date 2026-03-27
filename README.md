@@ -8,7 +8,7 @@
 * Simple command-line interface
 * Lightweight and easy to use
 
-### 🚀 Installation (Kali Linux):
+### 🚀 Installation (Linux):
 
 ```
 cd ~/Desktop
