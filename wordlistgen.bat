@@ -1,8 +1,5 @@
 @echo off
-:: Ultimate Password Generator - Batch File Version
-:: Generates personalized wordlists for security testing
 
-:: Color setup
 for /F "tokens=1,2 delims=#" %%a in ('"prompt #$H#$E# & echo on & for %%b in (1) do rem"') do (
   set "DEL=%%a"
 )
@@ -12,7 +9,6 @@ for /F "tokens=1" %%a in ('"%~f0?.tmp"') do (
   del "%~f0?.tmp"
 )
 
-:: Banner
 echo.
 echo   ____  _   _ ____  _     ___ _____ _____ 
 echo  ^|  _ \^| ^| ^| ^| __ )^| ^|   ^|_ _^|  ___^|  ___^|
@@ -44,7 +40,6 @@ if "%choice%"=="6" exit
 
 goto menu
 
-:: Data collection sections
 :personal
 cls
 echo === Personal Information ===
@@ -79,49 +74,40 @@ set /p food_drinks="Favorite foods/drinks: "
 set /p places="Favorite places/visited locations: "
 goto menu
 
-:: Password generation
+:: =====Password generation=====
 :generate
 cls
 echo Generating passwords...
 setlocal enabledelayedexpansion
 
-:: Basic separators and years
+
 set separators= _ - . / ^! @ # $ 
 set /a current_year=%date:~-4%
 set /a start_year=current_year - 5
 set /a end_year=current_year
 
-:: Leetspeak substitutions
 set leet=a4 e3 i1 o0 s5 t7
 
-:: Initialize output file
 echo. > wordlist.txt
 
-:: Generate from names
 for %%a in (%names%) do (
   call :generate_variations "%%a"
 )
 
-:: Generate from other fields (repeat for each category)
-:: [Additional generation code would go here...]
-
-:: Final count
+:: Number of passwords generated
 for /f %%A in ('type wordlist.txt ^| find /v /c ""') do set count=%%A
 echo Generated !count! passwords in wordlist.txt
 echo.
 pause
 goto menu
 
-:: Variation generator subroutine
 :generate_variations
 set base=%~1
 
-:: Case variations
 echo !base! >> wordlist.txt
 echo !base:~0,1!!base:~1! >> wordlist.txt
 echo !base:~0,1!!base:~1! >> wordlist.txt
 
-:: Leetspeak
 set leetword=!base!
 for %%s in (%leet%) do (
   set original=%%s
@@ -132,7 +118,6 @@ for %%s in (%leet%) do (
 )
 echo !leetword! >> wordlist.txt
 
-:: With years and separators
 for /l %%y in (%start_year%, 1, %end_year%) do (
   echo !base!%%y >> wordlist.txt
   for %%s in (%separators%) do (
@@ -142,6 +127,5 @@ for /l %%y in (%start_year%, 1, %end_year%) do (
 )
 goto :eof
 
-:: Clean exit
 :exit
 exit /b
