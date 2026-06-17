@@ -92,52 +92,46 @@ def generate_variations(base_words):
         if not word:
             continue
             
-        # Case variations
         variations.add(word.lower())
         variations.add(word.capitalize())
         variations.add(word.upper())
         
-        # Leetspeak
         variations.add(apply_leet(word))
         
-        # Add common suffixes
         for year in years:
             variations.add(f"{word}{year}")
             variations.add(f"{word.capitalize()}{year}")
             
-        # Add separators
         for sep in separators:
             variations.add(f"{word}{sep}")
             variations.add(f"{sep}{word}")
             
     return variations
 
-# Generate all password candidates
 all_passwords = set()
 
-# Personal info passwords
+
 all_passwords.update(generate_variations(personal_info['names']))
 all_passwords.update(generate_variations(personal_info['pet_names']))
 all_passwords.update(generate_variations(personal_info['birthdays']))
 all_passwords.update(generate_variations(personal_info['phone']))
 all_passwords.update(generate_variations(personal_info['address_parts']))
 
-# Pop culture passwords
+
 all_passwords.update(generate_variations(pop_culture['teams']))
 all_passwords.update(generate_variations(pop_culture['celebrities']))
 all_passwords.update(generate_variations(pop_culture['movies_shows']))
 all_passwords.update(generate_variations(pop_culture['music']))
 
-# Common patterns
 all_passwords.update(generate_variations(common_patterns['basic_words']))
 all_passwords.update(generate_variations(common_patterns['keyboard_patterns']))
 
-# Hobbies passwords
+
 all_passwords.update(generate_variations(hobbies['gaming']))
 all_passwords.update(generate_variations(hobbies['food_drinks']))
 all_passwords.update(generate_variations(hobbies['places']))
 
-# Combination passwords (name + year + special char)
+
 for name in personal_info['names']:
     if not name:
         continue
@@ -148,12 +142,12 @@ for name in personal_info['names']:
             all_passwords.add(f"{year}{sep}{name}")
             all_passwords.add(f"{apply_leet(name)}{sep}{year}")
 
-# ===== SAVE RESULTS =====
+
 output_file = "ultimate_wordlist.txt"
 with open(output_file, 'w') as f:
     for pwd in sorted(all_passwords):
-        if 6 <= len(pwd) <= 32:  # Reasonable password length limits
+        if 6 <= len(pwd) <= 32:
             f.write(f"{pwd}\n")
 
 print(f"\n{colors.GREEN}Generated {len(all_passwords)} passwords in {output_file}{colors.END}")
-print(f"{colors.YELLOW}Remember: Only use this for authorized security testing!{colors.END}")
+print(f"{colors.YELLOW}Thanks for using L.Y.C. tool!{colors.END}")
