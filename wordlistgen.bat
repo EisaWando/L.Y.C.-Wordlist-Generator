@@ -16,7 +16,7 @@ echo  ^| ^|_) ^| ^| ^| ^|  _ \^| ^|    ^| ^|^| ^|_  ^| ^|_
 echo  ^|  __/^| ^|_^| ^| ^|_) ^| ^|___ ^| ^|^|  _^|^|  _^|  
 echo  ^|_^|    \___/^|____/^|_____^|___^|_^|   ^|_^|    
 echo.
-echo Ultimate Personalized Password Generator
+echo L.Y.C. for Personalized Password Generation
 echo.
 
 :: Main menu
